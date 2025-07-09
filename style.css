@@ -473,6 +473,11 @@ a{
         font-size: 18px;
     }
 
+    .navbar ul li a.active {
+        color: #7cf03d;
+        text-shadow: 0 0 10px rgba(124, 240, 61, 0.5);
+    }
+
     .navbar .logo {
         font-size: 26px;
     }
@@ -569,6 +574,11 @@ a{
 
     .navbar ul li a {
         font-size: 16px;
+    }
+
+    .navbar ul li a.active {
+        color: #7cf03d;
+        text-shadow: 0 0 10px rgba(124, 240, 61, 0.5);
     }
 
     .navbar .logo {
