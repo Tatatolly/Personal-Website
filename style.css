@@ -498,6 +498,7 @@ a{
     .home-img {
         order: 1;
         margin-bottom: 20px;
+        margin-top: 15px;
     }
 
     .home-img .img-box {
