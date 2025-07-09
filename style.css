@@ -171,6 +171,11 @@ a{
     color: #7cf03d;
 }
 
+.navbar ul li a.active{
+    color: #7cf03d;
+    text-shadow: 0 0 10px rgba(124, 240, 61, 0.5);
+}
+
 .home{
     display: flex;
     align-items: center;
@@ -568,6 +573,7 @@ a{
 
     .navbar .logo {
         font-size: 24px;
+        margin-top: 10px;
     }
 
     .home {
