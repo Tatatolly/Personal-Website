@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portofolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manufacturing+Consent&family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="logo">Tito.</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="home">
+      <div class="home-info">
+        <h1>Ahmed Tarek</h1>
+        <h2>
+          I'm a <span id="typewriter"></span><span class="cursor">|</span>
+        </h2>
+        <p>
+          Designing smooth, responsive, and scalable websites from front to
+          back. Clean code, smart logic, and user-first thinking. I bring
+          digital ideas to life — full stack development with passion,
+          precision, and purpose. Let’s build together.
+        </p>
+        <div class="btn-sci">
+          <a
+            href="https://tatatolly.github.io/My-Resume/"
+            class="btn"
+            target="_blank"
+            >Download CV</a
+          >
+          <div class="sci">
+            <a href="https://github.com/Tatatolly" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/ahmed-aglan-220735330"
+              target="_blank"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+            <a href="https://x.com/titos_shitos" target="_blank"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/not_titoos/" target="_blank"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="home-img">
+        <div class="img-box">
+          <div class="img-item">
+            <img src="./Fotos/Me.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-box">
+          <div class="content-section">
+            <h3>My Journey</h3>
+            <p>
+              Started as a curious developer exploring the vast world of
+              programming. From building simple websites to creating complex
+              full-stack applications, every project has been a stepping stone
+              in my journey.
+            </p>
+          </div>
+          <div class="content-section">
+            <h3>Skills & Expertise</h3>
+            <p>
+              Proficient in modern web technologies including React, Node.js,
+              and database management. I focus on creating scalable, efficient,
+              and user-friendly applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-content">
+        <h2>Get in touch</h2>
+        <p>
+          Have a project in mind or want to collaborate? Fill out the form or
+          reach me directly.
+        </p>
+        <div class="contact-links">
+          <a href="tel:+201013359367">📱 +20 1013359367</a>
+          <a href="mailto:ahmedaglan844@gmail.com"
+            >✉️ ahmedaglan844@gmail.com</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Ahmed Tarek. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const typewriter = document.getElementById("typewriter");
+      const text = "Fullstack Developer";
+      let index = 0;
+
+      function typeText() {
+        if (index < text.length) {
+          typewriter.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeText, 100); // Adjust speed here (100ms per character)
+        } else {
+          // Optional: restart the animation after a pause
+          setTimeout(() => {
+            typewriter.textContent = "";
+            index = 0;
+            typeText();
+          }, 2000); // Wait 2 seconds before restarting
+        }
+      }
+
+      // Start the typing animation when page loads
+      window.addEventListener("load", () => {
+        setTimeout(typeText, 500); // Start after 0.5 seconds
+      });
+
+      // Navbar background change on scroll
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        const homeSection = document.getElementById("home");
+        const homeHeight = homeSection.offsetHeight;
+
+        if (window.scrollY > homeHeight - 100) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
